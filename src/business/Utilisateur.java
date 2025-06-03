@@ -12,6 +12,7 @@ public abstract class Utilisateur {
     }
 
     protected Utilisateur(String pseudo, String motDePasse, String email) {
+        this();
         this.pseudo = pseudo;
         this.motDePasse = motDePasse;
         this.email = email;
