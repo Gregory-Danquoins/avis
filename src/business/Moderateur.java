@@ -4,7 +4,7 @@ public class Moderateur extends Utilisateur {
     private String numeroDeTelephone;
 
     public Moderateur(String pseudo,String motDePasse,String email,String numeroDeTelephone ) {
-        super(pseudo, motDePasse, email);
+        super(pseudo, motDePasse, email);git 
         this.numeroDeTelephone = numeroDeTelephone;
     }
 
