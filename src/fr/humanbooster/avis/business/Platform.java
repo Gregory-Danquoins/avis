@@ -1,4 +1,4 @@
-package business;
+package fr.humanbooster.avis.business;
 
 public class Platform {
     private String name;

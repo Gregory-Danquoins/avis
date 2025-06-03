@@ -1,4 +1,4 @@
-package business;
+package fr.humanbooster.avis.business;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,6 @@
-package business;
+package fr.humanbooster.avis.business;
+
+import java.util.Objects;
 
 public class Moderateur extends Utilisateur {
     private String numeroDeTelephone;
@@ -18,6 +20,19 @@ public class Moderateur extends Utilisateur {
 
     public void setNumeroDeTelephone(String numeroDeTelephone) {
         this.numeroDeTelephone = numeroDeTelephone;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Moderateur that = (Moderateur) o;
+        return Objects.equals(numeroDeTelephone, that.numeroDeTelephone);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), numeroDeTelephone);
     }
 
     @Override

@@ -1,11 +1,13 @@
-package business;
+package fr.humanbooster.avis.business;
+
+import java.util.Objects;
 
 public abstract class Utilisateur {
     protected Long id;
     protected String pseudo;
     protected String motDePasse;
     protected String email;
-    protected static Long compteur = 0L;
+    private static Long compteur = 0L; // Initial value instead of "null"
 
     protected Utilisateur() {
         this.id = ++compteur;
@@ -56,6 +58,21 @@ public abstract class Utilisateur {
 
     public static void setCompteur(Long compteur) {
         Utilisateur.compteur = compteur;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Utilisateur that = (Utilisateur) o;
+        return Objects.equals(id, that.id)
+                && Objects.equals(pseudo, that.pseudo)
+                && Objects.equals(motDePasse, that.motDePasse)
+                && Objects.equals(email, that.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, pseudo, motDePasse, email);
     }
 
     @Override
