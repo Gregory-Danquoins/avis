@@ -15,7 +15,7 @@ public class Jeu {
      * Constructeur défault
      */
     public Jeu() {
-        this.id = compteur++;
+        this.id = ++compteur;
     }
 
     /**
