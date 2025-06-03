@@ -2,14 +2,18 @@ package fr.humanbooster.avis.business;
 
 import java.util.Objects;
 
-public class Plateforme {
+public class Plateforme implements Comparable<Plateforme> {
     private String nom;
     private Long id;
     private static  Long compteur = 0L;
 
-    public Plateforme(String nom) {
-        this.nom = nom;
+    public Plateforme() {
         this.id = ++compteur;
+    }
+
+    public Plateforme(String nom) {
+        this();
+        this.nom = nom;
     }
 
     public String getNom() {
@@ -53,5 +57,10 @@ public class Plateforme {
                 "nom='" + nom + '\'' +
                 ", id=" + id +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Plateforme o) {
+        return getNom().compareTo(o.getNom());
     }
 }

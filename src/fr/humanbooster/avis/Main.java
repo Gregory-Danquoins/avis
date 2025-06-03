@@ -36,6 +36,7 @@ public class Main {
 
         System.out.println("----- PRINT -----");
 
+        //--- Cast
         for (Utilisateur utilisateur : utilisateurs) {
             // Vérifier la classe de l'objet & l'instancier + caster dans une variable pour l'utiliser dans l'IF
             // (pratique si on doit l'utiliser plusieurs fois)
