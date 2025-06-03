@@ -37,6 +37,6 @@ public class Moderateur extends Utilisateur {
 
     @Override
     public String toString() {
-        return "Moderateur{" + super.toString() + "numeroDeTelephone=" + numeroDeTelephone + '}';
+        return "Modérateur{" + super.toString() + "numeroDeTelephone=" + numeroDeTelephone + '}';
     }
 }
