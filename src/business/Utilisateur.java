@@ -7,8 +7,14 @@ public abstract class Utilisateur {
     protected String email;
     protected static Long compteur = 0L;
 
-    public Utilisateur() {
-        this.id = compteur++;
+    protected Utilisateur() {
+        this.id = ++compteur;
+    }
+
+    protected Utilisateur(String pseudo, String motDePasse, String email) {
+        this.pseudo = pseudo;
+        this.motDePasse = motDePasse;
+        this.email = email;
     }
 
     public Long getId() {
