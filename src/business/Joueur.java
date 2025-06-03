@@ -26,10 +26,6 @@ public class Joueur extends Utilisateur{
 
     @Override
     public String toString() {
-        return "Joueur{" +
-                "id=" + id +
-                ", dateDeNaissance=" + dateDeNaissance +
-                '}';
+        return "Joueur{" + super.toString() + "dateDeNaissance=" + dateDeNaissance + '}';
     }
-
 }

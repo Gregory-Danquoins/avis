@@ -3,6 +3,10 @@ package business;
 public class Moderateur extends Utilisateur {
     private String numeroDeTelephone;
 
+    public Moderateur() {
+        super();
+    }
+
     public Moderateur(String pseudo,String motDePasse,String email,String numeroDeTelephone ) {
         super(pseudo, motDePasse, email);
         this.numeroDeTelephone = numeroDeTelephone;
@@ -18,12 +22,6 @@ public class Moderateur extends Utilisateur {
 
     @Override
     public String toString() {
-        return "Moderateur{" +
-                "numeroDeTelephone='" + numeroDeTelephone + '\'' +
-                ", id=" + id +
-                ", pseudo='" + pseudo + '\'' +
-                ", motDePasse='" + motDePasse + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "Moderateur{" + super.toString() + "numeroDeTelephone=" + numeroDeTelephone + '}';
     }
 }
